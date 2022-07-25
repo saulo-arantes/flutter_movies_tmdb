@@ -1,10 +1,10 @@
 import 'package:bloc/bloc.dart';
 import 'package:movies/blocs/movies/movies_event.dart';
 import 'package:movies/blocs/movies/movies_state.dart';
-import 'package:movies/repositories/movie_repository.dart';
+import 'package:movies/repositories/movie_list_repository.dart';
 
 class MoviesBloc extends Bloc<MoviesEvent, MoviesState> {
-  final MovieRepository repository = MovieRepository();
+  final MovieListRepository repository = MovieListRepository();
 
   final String listType;
 

@@ -7,6 +7,8 @@ class Movie {
 
   final String releaseDate;
 
+  final String? tagline;
+
   final String overview;
 
   Movie({
@@ -14,7 +16,8 @@ class Movie {
     required this.title,
     required this.poster,
     required this.releaseDate, 
-    required this.overview
+    this.tagline,
+    required this.overview,
   });
   
   factory Movie.fromJson(Map<String, dynamic> json) {
@@ -23,7 +26,8 @@ class Movie {
       title: json['title'],
       poster: 'https://image.tmdb.org/t/p/w500${json['poster_path']}',
       releaseDate: json['release_date'],
-      overview: json['overview'] 
+      tagline: json['tagline'],
+      overview: json['overview'],
     );
   }
 }
